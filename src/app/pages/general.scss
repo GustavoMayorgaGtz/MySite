@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+/*font-family: 'PT Sans', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Passion+One&family=Varela+Round&display=swap');
+// font-family: 'Mukta', sans-serif;
+// font-family: 'Passion One', cursive;
+// font-family: 'Varela Round', sans-serif;
+
+.container-primary{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+nav{
+    width: 100vw;
+    height: 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.103);
+}
