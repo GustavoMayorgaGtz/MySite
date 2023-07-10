@@ -94,6 +94,7 @@ nav {
         width: 0%;
     }
 }
+//Mobile styles
 @media screen and (max-width: 700px) {
     nav>.left {
         display: none;
@@ -145,6 +146,16 @@ nav {
                 height: 60%;
             }
         }
+    }
+
+    .responsiveMenu{
+        position: absolute;
+        top:80px;
+        right: 0px;
+        width:90%;
+        margin-left: 10%;
+        height: calc(100vh - 80px);
+        // background-color: red;
     }
  
 }
