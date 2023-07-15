@@ -1,4 +1,4 @@
-<nav>
+<nav (loadstart)="responsiveMenuClick_Event(menu)">
     <div class="left">
         <span class="title">
             AUDE
@@ -19,13 +19,14 @@
     </div>
 
     <div class="container-options-responsive">
-        <div class="options">
+        <div class="options" (click)="responsiveMenuClick_Event(menu)">
             <img src="./assets/menu.svg" class="menu-icon" alt="menu">
         </div>
 
     </div>
 </nav>
-<section class="responsiveMenu">
+
+<div class="hiddeMenu"  #menu>
     <div class="option">
         <img src="./assets/menu/house-blank.svg" alt="Inicio" class="icon">
         Inicio
@@ -46,4 +47,4 @@
         <img src="./assets/menu/info.svg" alt="About" class="icon">
         Nosotros
     </div>
-</section>
+</div>
