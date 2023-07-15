@@ -1,55 +1,57 @@
-<nav (loadstart)="responsiveMenuClick_Event(menu)">
-    <div class="left">
-        <span class="title">
-            AUDE
-            <span class="subtitle">
-                systems.
+<div class="container-nav">
+    <nav (loadstart)="responsiveMenuClick_Event(menu)">
+        <div class="left">
+            <span class="title">
+                AUDE
+                <span class="subtitle">
+                    systems.
+                </span>
             </span>
-        </span>
-    </div>
-
-    <div class="container-options">
-        <div class="options">
-            <a href="https://www.instagram.com/audesystems/">
-                Instagram
-            </a>
-        </div>
-        <div class="options">Contacto</div>
-        <div class="options">Acerca de</div>
-    </div>
-
-    <div class="container-options-responsive">
-        <div class="options" (click)="responsiveMenuClick_Event(menu)">
-            <img src="./assets/menu.svg" class="menu-icon" alt="menu">
         </div>
 
-    </div>
-</nav>
+        <div class="container-options">
+            <div class="options">
+                <a href="https://www.instagram.com/audesystems/">
+                    Instagram
+                </a>
+            </div>
+            <div class="options">Contacto</div>
+            <div class="options">Acerca de</div>
+        </div>
 
-<div class="hiddeMenu"  #menu>
-    <div class="option">
-        <img src="./assets/menu/house-blank.svg" alt="Inicio" class="icon">
-        Inicio
-        <div class="shadow"></div>
-    </div>
-    <div class="option">
-        <img src="./assets/menu/headset.svg" alt="Contacto" class="icon">
-        Contacto
-        <!-- <div class="shadow"></div> -->
-    </div>
-    <div class="option">
-        <img src="./assets/menu/poll-h.svg" alt="Articulos" class="icon">
-        Articulos
-        <!-- <div class="shadow"></div> -->
-    </div>
-    <div class="option">
-        <img src="./assets/menu/instagram.svg" alt="Instagram" class="icon">
-        Instagram
-        <!-- <div class="shadow"></div> -->
-    </div>
-    <div class="option">
-        <img src="./assets/menu/info.svg" alt="About" class="icon">
-        Nosotros
-        <!-- <div class="shadow"></div> -->
+        <div class="container-options-responsive">
+            <div class="options" (click)="responsiveMenuClick_Event(menu)">
+                <img src="./assets/menu.svg" class="menu-icon" alt="menu">
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="hiddeMenu" #menu>
+        <div class="option">
+            <img src="./assets/menu/house-blank.svg" alt="Inicio" class="icon">
+            Inicio
+            <div class="shadow"></div>
+        </div>
+        <div class="option">
+            <img src="./assets/menu/headset.svg" alt="Contacto" class="icon">
+            Contacto
+            <!-- <div class="shadow"></div> -->
+        </div>
+        <div class="option">
+            <img src="./assets/menu/poll-h.svg" alt="Articulos" class="icon">
+            Articulos
+            <!-- <div class="shadow"></div> -->
+        </div>
+        <div class="option">
+            <img src="./assets/menu/instagram.svg" alt="Instagram" class="icon">
+            Instagram
+            <!-- <div class="shadow"></div> -->
+        </div>
+        <div class="option">
+            <img src="./assets/menu/info.svg" alt="About" class="icon">
+            Nosotros
+            <!-- <div class="shadow"></div> -->
+        </div>
     </div>
 </div>

@@ -1,17 +1,44 @@
   @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
   // font-family: 'Quicksand', sans-serif;
 
+  @mixin display_center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-primary {
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+    z-index: 1;
+    border: 1px solid rgb(199, 12, 12);
+    box-sizing: border-box;
+  }
+
+  main {
+    position: relative;
+    margin-top: 80px;
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    overflow-x: hidden;
+    
+  }
+
+  footer {
+    margin-top: 30px;
+    width: 100vw;
+    min-height: 80px;
+    background-color: rgb(26, 39, 49);
+  }
 
   //////////////////////////////////////////
-
   .responsiveTitle {
     display: none;
     opacity: 0;
     width: 0px;
     visibility: hidden;
   }
-
-  //////////////////////////////////////////
 
   //////////////////////////////////////////
   .container-title {
@@ -23,18 +50,14 @@
     width: 100%;
     height: min-content;
     //display and positions
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include display_center();
     flex-wrap: wrap;
 
     .left {
       //borders
       border-radius: 0px 0px 30% 0px;
       //display and positons
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include display_center();
       //size
       width: 50%;
       height: 100%;
@@ -61,16 +84,12 @@
       //styles
       background-color: rgb(255, 255, 255);
       //display and position
-      display: flex;
+      @include display_center();
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
 
       .title {
         //display and positions
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include display_center();
         text-align: center;
         //margin & borders
         margin: 50px auto 50px auto;
@@ -120,14 +139,10 @@
   }
 
   //////////////////////////////////////////
-
-  //////////////////////////////////////////
   .subtitle {
     width: 100%;
     height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include display_center();
 
     .line_1 {
       width: 10%;
@@ -184,9 +199,7 @@
         border-radius: 50%;
         border: 0px;
         background-color: rgb(207, 221, 233);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include display_center();
 
         .icon {
           width: 70%;
@@ -196,9 +209,7 @@
 
       .title {
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include display_center();
         margin-top: 40px;
         font-family: 'Quicksand', sans-serif;
         font-weight: bolder;
@@ -206,9 +217,7 @@
 
       .comments {
         width: 90%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include display_center();
         box-sizing: border-box;
         margin: 15px auto 10px auto;
         font-family: 'Quicksand', sans-serif;
@@ -254,9 +263,6 @@
   }
 
   @media screen and (max-width: 700px) {
-
-    
-
     .container-title {
       margin-top: 0px;
       padding: 0px;
@@ -273,9 +279,7 @@
         font-weight: bold;
         padding: 20px;
         font-size: 18px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include display_center();
         color: black;
 
         .title {
@@ -327,9 +331,7 @@
       border-radius: 10px;
       min-width: 300px;
       height: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include display_center();
 
       .title {
         display: flex;
@@ -382,9 +384,7 @@
           border-radius: 50%;
           border: 0px;
           background-color: rgb(207, 221, 233);
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          @include display_center();
 
           .icon {
             width: 70%;
@@ -394,9 +394,7 @@
 
         .title {
           width: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          @include display_center();
           margin-top: 40px;
           font-size: 18px;
           font-family: 'Quicksand', sans-serif;
@@ -405,9 +403,7 @@
 
         .comments {
           width: 90%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          @include display_center();
           box-sizing: border-box;
           margin: 15px auto 10px auto;
           font-family: 'Quicksand', sans-serif;
