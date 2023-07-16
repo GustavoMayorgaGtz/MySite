@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AllService } from 'src/app/servicios/all.service';
 
 @Component({
   selector: 'app-nav',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
-  constructor() {
+  constructor(private servicios: AllService) {
   }
 
   ngOnInit(): void {
@@ -15,6 +16,7 @@ export class NavComponent implements OnInit {
   public menuOption : number = 0;
   changeMenuOption(number: number){
     this.menuOption = number;
+    this.servicios.setMenuOption(number);
   }
 
   public classMenu = "hiddeMenu";
@@ -25,17 +27,10 @@ export class NavComponent implements OnInit {
       this.classMenu = "showMenu";
       menuElement.classList.remove("hiddeMenu");
       menuElement.classList.toggle(this.classMenu)
-      // menuElement.setAttribute("class", "showMenu");
     } else {
       this.classMenu = "hiddeMenu";
       menuElement.classList.remove("showMenu");
       menuElement.classList.toggle(this.classMenu)
-      // menuElement.setAttribute("class", "hiddeMenu");
     }
-    console.log(this.classMenu);  
-    // menuElement.classList.toggle(this.classMenu);
-    // menuElement.offsetHeight; // force DOM reflow
-    //  menuElement.style.animation = "2s "+ this.classMenu+";";
-    //  menuElement.style.animation = "2s "+ this.classMenu;
   }
 }

@@ -1,14 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AllService } from 'src/app/servicios/all.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
 
-  constructor(){
+  public menuOption: number = 0;
+  constructor(private servicios: AllService){
+    
+  }
 
+  ngOnInit(): void {
+    this.servicios.menuOption.subscribe((option) =>{
+       this.menuOption = option;
+    })
   }
 
 }
