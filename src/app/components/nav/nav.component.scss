@@ -1,15 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 // font-family: 'Quicksand', sans-serif;
 
-.container-nav{
-    width: 100vw;
-    overflow-x: hidden;
-}
-
 nav {
     position: absolute;
-    top: 0px;
-    // z-index: 5;
+    top: 0;
+    z-index: 5;
     width: 100vw;
     height: 80px;
     background-color: rgb(255, 255, 255);

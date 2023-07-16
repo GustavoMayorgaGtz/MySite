@@ -1,4 +1,4 @@
-<div class="container-nav">
+
     <nav (loadstart)="responsiveMenuClick_Event(menu)">
         <div class="left">
             <span class="title">
@@ -28,30 +28,29 @@
     </nav>
 
     <div class="hiddeMenu" #menu>
-        <div class="option">
+        <div class="option" (click)="changeMenuOption(0)">
             <img src="./assets/menu/house-blank.svg" alt="Inicio" class="icon">
             Inicio
-            <div class="shadow"></div>
+            <div class="shadow" *ngIf="menuOption === 0"></div>
         </div>
-        <div class="option">
+        <div class="option" (click)="changeMenuOption(1)">
             <img src="./assets/menu/headset.svg" alt="Contacto" class="icon">
             Contacto
-            <!-- <div class="shadow"></div> -->
+            <div class="shadow" *ngIf="menuOption === 1"></div>
         </div>
-        <div class="option">
+        <div class="option" (click)="changeMenuOption(2)">
             <img src="./assets/menu/poll-h.svg" alt="Articulos" class="icon">
             Articulos
-            <!-- <div class="shadow"></div> -->
+            <div class="shadow" *ngIf="menuOption === 2"></div>
         </div>
-        <div class="option">
+        <div class="option" (click)="changeMenuOption(3)">
             <img src="./assets/menu/instagram.svg" alt="Instagram" class="icon">
             Instagram
-            <!-- <div class="shadow"></div> -->
+            <div class="shadow" *ngIf="menuOption === 3"></div>
         </div>
-        <div class="option">
+        <div class="option" (click)="changeMenuOption(4)">
             <img src="./assets/menu/info.svg" alt="About" class="icon">
             Nosotros
-            <!-- <div class="shadow"></div> -->
+            <div class="shadow" *ngIf="menuOption === 4"></div>
         </div>
     </div>
-</div>
