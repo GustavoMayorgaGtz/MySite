@@ -15,13 +15,20 @@ export class NavComponent implements OnInit {
 
   public menuOption : number = 0;
   changeMenuOption(number: number){
-    this.menuOption = number;
-    this.servicios.setMenuOption(number);
+    if(number != 3){
+      this.menuOption = number;
+      this.servicios.setMenuOption(number);
+      this.responsiveMenuClick_Event(this.menuElement);
+    }else{
+      window.location.href = "https://www.instagram.com/audesystems/";
+    }
   }
 
   public classMenu = "hiddeMenu";
   public isShowMenu = false;
+  public menuElement!: HTMLDivElement;
   responsiveMenuClick_Event(menuElement: HTMLDivElement) {
+    this.menuElement = menuElement;
     this.isShowMenu = !this.isShowMenu;
     if (this.isShowMenu) {
       this.classMenu = "showMenu";
