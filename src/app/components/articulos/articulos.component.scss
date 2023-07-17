@@ -17,7 +17,7 @@
     //CONTENEDOR DE TITULO Y SUBTITULO
     .card-title {
         width: 80%;
-        height: 50px;
+        height: min-content;
         border-radius: 5px;
         display: flex;
         align-items: center;
@@ -49,22 +49,41 @@
 
     //CONTENEDOR DE ARTICULOS
     .container-articulo {
+        cursor: pointer;
         width: 90%;
-        height: 100px;
+        height: min-content;
         box-sizing: border-box;
         border-radius: 5px;
         box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.079);
         border: 1px solid rgb(143, 143, 143);
         margin: 10px auto;
-        display: grid;
-        grid-template-columns: 2fr 5fr;
-        grid-template-rows: 1fr;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        transition: all 0.1s;
 
-        .icon-container-article {}
+        &:hover{
+            transform: scale(1.02);
+            transition: all 0.3s;
+        }
+
+        .icon-container-article {
+            width: 100px;
+            height: 100px;
+            @include center();
+
+            .document{
+                width: 50%;
+                height: 50%;
+                filter: invert(0.3);
+            }
+        }
 
         .information-container-article {
             padding: 10px;
             box-sizing: border-box;
+            width: 80%;
+            height: auto;
 
             .title {
                 font-family: 'Quicksand', sans-serif;
@@ -84,7 +103,7 @@
 
         //CONTENEDOR DE ARTICULOS
         .container-articulo {
-            height: 120px;
+            height: min-content;
         }
 
     }
