@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+// font-family: 'Quicksand', sans-serif;
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+}
+
+@mixin center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-primary {
+    width: 100vw;
+    height: min-content;
+    min-height: 100vh;
+    overflow-x: hidden;
+    z-index: 1;
+
+    .container-informacion {
+        margin-top: 95px;
+        width: 100%;
+        height: max-content;
+        @include center();
+        flex-direction: column;
+
+        .title {
+            min-width: 90%;
+            padding: 10px 5px;
+            border-left: 5px solid rgb(63, 107, 179);
+            margin: 30px 10%;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .tema{
+            .subtitle {
+                width: 100%;
+                padding: 10px 10%;
+                font-size: 18px;
+                font-weight: bold;
+            }
+    
+            .content {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                padding: 10px 10%;
+                .inf{
+                    font-size: 14px;
+                    font-weight: bold;
+                    text-overflow:ellipsis;
+                    text-align: justify;
+                    letter-spacing: 0.03cm;
+
+                    li{
+                     margin-bottom: 10px;
+                    }
+                }
+                .img-container{
+                    margin: 20px auto;
+                    width: 50%;
+                    overflow: hidden;
+                    height: auto;
+                    border-radius: 5px;
+                    background-color: white;
+                    border:1px solid rgb(185, 185, 185);
+                    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.133);
+                    padding: 10px;
+                    overflow: hidden;
+
+                    .helpimg{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+    }
+}
