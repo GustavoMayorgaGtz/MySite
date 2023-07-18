@@ -9,17 +9,17 @@ import { Meta } from '@angular/platform-browser';
 export class SoftwareALaMedidaComponent implements OnInit{
 
   constructor(private meta: Meta){
-
-  }
-
-  ngOnInit(): void {
-    // <meta name="description" content="Desarrollo de sistemas hechos a la medida para tu comercio o industria.">
-    // <meta name="keywords" content="Audesystems, AudeSystems, audesystems, audeSystems, AUDESYSTEMS">
-    // <meta name="author" content="Gustavo Mayorga">
-    // <meta name="robots" content="index">
     this.meta.addTag({ name: 'description', content: 'Software a la medida, by Mayte Caldera' });
     this.meta.addTag({ name: 'author', content: 'Mayte Caldera, Gustavo Mayorga' });
     this.meta.addTag({ name: 'keywords', content: 'Software a la medida, SOFTWARE A LA MEDIDA, software a la medida, Software A La Medida, Software, Medida, software, medida' });
+
+     // Agrega las meta etiquetas específicas
+     this.meta.addTag({ property: 'og:title', content: 'Audesystems' });
+     this.meta.addTag({ property: 'og:description', content: 'Software a la medida, by Mayte Caldera' });
+     this.meta.addTag({ property: 'og:image', content: 'https://audesystems.com/favicon.ico' });
+  }
+
+  ngOnInit(): void {
   }
 
 }

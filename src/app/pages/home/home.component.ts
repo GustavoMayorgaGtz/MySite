@@ -8,7 +8,7 @@ import { AllService } from 'src/app/servicios/all.service';
 })
 export class HomeComponent implements OnInit{
 
-  public menuOption: number = 2;
+  public menuOption: number = 0;
   constructor(private servicios: AllService){
     
   }
