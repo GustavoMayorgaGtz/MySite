@@ -10,13 +10,15 @@
         </div>
 
         <div class="container-options">
-            <div class="options">
+            <div class="options-noborders">
                 <a href="https://www.instagram.com/audesystems/">
                     Instagram
                 </a>
             </div>
-            <div class="options">Contacto</div>
-            <div class="options">Acerca de</div>
+            <div class="options-noborders" (click)="changeMenuOption(2)">Articulos</div>
+            <!-- <div class="options-noborders">Acerca de</div>  -->
+            <div class="options" (click)="changeMenuOption(1)">Contacto</div>
+            <!-- <div class="options">Nosotros</div> -->
         </div>
 
         <div class="container-options-responsive">
@@ -48,9 +50,9 @@
             Instagram
             <div class="shadow" *ngIf="menuOption === 3"></div>
         </div>
-        <div class="option" (click)="changeMenuOption(4)">
-            <img src="./assets/menu/info.svg" alt="About" class="icon">
-            Nosotros
-            <div class="shadow" *ngIf="menuOption === 4"></div>
-        </div>
+            <!-- <div class="option" (click)="changeMenuOption(4)">
+                <img src="./assets/menu/info.svg" alt="About" class="icon">
+                Nosotros
+                <div class="shadow" *ngIf="menuOption === 4"></div>
+            </div> -->
     </div>
