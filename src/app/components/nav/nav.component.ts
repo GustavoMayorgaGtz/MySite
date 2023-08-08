@@ -15,7 +15,7 @@ export class NavComponent implements OnInit {
 
   public menuOption : number = 0;
   changeMenuOption(number: number){
-    if(number != 3){
+    if(number != 4){
       this.menuOption = number;
       this.servicios.setMenuOption(number);
       this.responsiveMenuClick_Event(this.menuElement);

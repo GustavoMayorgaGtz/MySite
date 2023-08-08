@@ -16,7 +16,8 @@
                     Instagram
                 </a>
             </div>
-            <div class="options-noborders" (click)="changeMenuOption(2)">Articulos</div>
+            <div class="options-noborders" (click)="changeMenuOption(3)">Articulos</div>
+            <div class="options-noborders" (click)="changeMenuOption(2)">Proyectos</div>
             <!-- <div class="options-noborders">Acerca de</div>  -->
             <div class="options" (click)="changeMenuOption(1)">Contacto</div>
             <!-- <div class="options">Nosotros</div> -->
@@ -43,13 +44,18 @@
         </div>
         <div class="option" (click)="changeMenuOption(2)">
             <img src="./assets/menu/poll-h.svg" alt="Articulos" class="icon">
-            Articulos
+            Proyectos
             <div class="shadow" *ngIf="menuOption === 2"></div>
         </div>
         <div class="option" (click)="changeMenuOption(3)">
+            <img src="./assets/menu/poll-h.svg" alt="Articulos" class="icon">
+            Articulos
+            <div class="shadow" *ngIf="menuOption === 3"></div>
+        </div>
+        <div class="option" (click)="changeMenuOption(4)">
             <img src="./assets/menu/instagram.svg" alt="Instagram" class="icon">
             Instagram
-            <div class="shadow" *ngIf="menuOption === 3"></div>
+            <div class="shadow" *ngIf="menuOption === 4"></div>
         </div>
             <!-- <div class="option" (click)="changeMenuOption(4)">
                 <img src="./assets/menu/info.svg" alt="About" class="icon">
