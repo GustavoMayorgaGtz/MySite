@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 // font-family: 'Quicksand', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+//font-family: 'Montserrat', sans-serif;
 
 * {
     font-family: 'Quicksand', sans-serif;
     box-sizing: border-box;
-    font-weight: bold;
 }
 
 @mixin center() {
@@ -30,7 +31,7 @@ header {
 
     section {
         width: 100%;
-        margin: 0px 10%;
+        margin: 0px 0%;
     }
 
     .title {
@@ -109,6 +110,7 @@ header {
 
                 .inf {
                     font-family: 'Quicksand', sans-serif;
+                    font-weight: bold;
                     font-size: 16px;
                     text-overflow: ellipsis;
                     text-align: justify;
@@ -118,8 +120,10 @@ header {
                         margin-bottom: 30px;
                     }
                     .mark{
-                        font-weight: bolder;
+                        font-family: 'Montserrat', sans-serif;
                         color: #1b5597;
+                        font-weight: 800;
+                        letter-spacing: 0.025cm;
                     }
                 }
 
