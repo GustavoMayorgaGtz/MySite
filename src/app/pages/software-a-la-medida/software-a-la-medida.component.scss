@@ -8,6 +8,8 @@
     box-sizing: border-box;
 }
 
+$font-size-paragraph: 16 px;
+
 @mixin center() {
     display: flex;
     justify-content: center;
@@ -35,30 +37,41 @@ header {
         width: 100%;
         margin: 0px 0%;
 
-       aside{
-        width:30%;
-        height: 100%;
-        // background-color: red;
-        border: 1px solid rgb(154, 154, 154);
-        border-radius: 5px;
-        margin-right: 20px;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        aside {
+            width: 30%;
+            height: 100vh;
+            // background-color: red;
+            // border: 1px solid rgb(154, 154, 154);
+            // border-radius: 5px;
+            margin-right: 20px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
 
-        .publicidad{
-          width: 100%;
-          height: auto;
-          min-height: 200px;
-          border-radius: 8px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 10px;
-          background-color:#223954;
+            .publicidad {
+                width: 30%;
+                height: auto;
+                min-height: 200px;
+                border-radius: 8px;
+                margin: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                background-color: #223954;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: white;
+                font-size: 16px;
+                font-weight: bold;
+                position: fixed;
+            }
         }
-       }
     }
 
     .title {
@@ -67,7 +80,7 @@ header {
         border-bottom: 5px solid rgb(63, 107, 179);
         margin: 10px auto;
         font-size: calc(1vw + 24px);
-        font-weight: bold;
+        // font-weight: bold;
         color: black;
     }
 
@@ -75,10 +88,14 @@ header {
         //paddings margins borders
         padding: 0px 50px;
         //size
-        width: 70%;
+        width: 80%;
+        margin: 0px auto;
         height: max-content;
         @include center();
         flex-direction: column;
+        .bibliografias{
+            width: 100%;
+        }
 
         .bibliografias>.content>.inf {
             display: flex;
@@ -86,6 +103,9 @@ header {
             align-items: center;
             flex-direction: column;
             gap: 0px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: bold;
+            width: 100%;
 
             ul {
                 margin: 5px;
@@ -94,18 +114,20 @@ header {
                 width: 100%;
                 height: auto;
                 font-size: 12px;
-                font-weight: bold;
+                // font-weight: bold;
                 border: 1px solid rgb(151, 151, 151);
                 overflow: hidden;
             }
         }
 
         .tema {
+            width: 100%;
             .subtitle {
                 width: max-content;
                 padding: 0px 10px;
                 font-size: 23px;
-                font-weight: bolder;
+                font-family: 'Quicksand', sans-serif;
+                font-weight: bold;
                 border-left: 5px solid rgb(63, 107, 179);
             }
 
@@ -123,7 +145,7 @@ header {
                 gap: 8px;
                 width: max-content;
                 font-size: 19px;
-                font-weight: bolder;
+                // font-weight: bolder;
 
             }
 
@@ -133,9 +155,10 @@ header {
                 width: 100%;
 
                 .inf {
-                    font-weight: 600;
-                    font-family: 'Mukta', sans-serif;
-                    font-size: 18px;
+                    // font-weight: 600;
+                    font-family: 'Quicksand', sans-serif;
+                    font-weight: bold;
+                    font-size: $font-size-paragraph;
                     text-overflow: ellipsis;
                     text-align: justify;
                     letter-spacing: 0.035cm;
@@ -143,9 +166,10 @@ header {
                     li {
                         margin-bottom: 30px;
                     }
-                    .mark{
+
+                    .mark {
                         color: #1b5597;
-                        font-weight: 800;
+                        // font-weight: 800;
                         letter-spacing: 0.025cm;
                     }
                 }
@@ -154,25 +178,25 @@ header {
                     width: 100%;
                     height: 100%;
                     background-color: white;
-                    border: 1px solid rgb(182, 182, 182);
-                    border-radius: 5px;
                     padding: 15px;
                     margin: 10px;
 
                     .title {
                         width: 100%;
+                        font-family: 'Quicksand', sans-serif;
                         font-weight: bold;
-                        font-size: 18px;
+                        font-size: 20px;
                         color: rgb(72, 72, 72);
                     }
 
                     .inf {
                         width: 100%;
+                        font-family: 'Quicksand', sans-serif;
                         font-weight: bold;
-                        font-size: 15px;
+                        font-size: $font-size-paragraph;
                         color: rgb(0, 0, 0);
 
-                  
+
                     }
                 }
 
@@ -182,7 +206,7 @@ header {
                     overflow: hidden;
                     height: auto;
                     border-radius: 5px;
-                 
+
                     // background-color: white;
                     // border:1px solid rgb(185, 185, 185);
                     // box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.133);
@@ -190,7 +214,7 @@ header {
                     overflow: hidden;
 
                     figcaption {
-                        font-weight: bold;
+                        // font-weight: bold;
                         font-size: 18px;
                         //display
                         text-align: center;
@@ -211,5 +235,25 @@ header {
             }
         }
 
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .container-primary{
+        section{
+            article{
+                width: 100%;
+            }
+
+            aside{
+                .publicidad{
+                    display: none;
+                    visibility: 0;
+                    width: 0;
+                    position: relative;
+                }
+            }
+        }
     }
 }
